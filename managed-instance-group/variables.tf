@@ -33,10 +33,16 @@ variable compute_image {
   default = "ubuntu-1604-xenial-v20170328"
 }
 
+variable compute_startup_script {
+  description = "Startup script for compute node"
+  default = "${file("${path.module}/scripts/compute.sh")}"
+}
+
 variable service_port {
   description = "TCP port your service is listening on."
   default = "80"
 }
+
 
 output "external_ip" {
   value = "${google_compute_forwarding_rule.compute.ip_address}"
