@@ -35,7 +35,7 @@ variable compute_image {
 
 variable compute_startup_script {
   description = "Startup script for compute node"
-  default = "${file("${path.module}/scripts/compute.sh")}"
+  default = "./scripts/compute.sh"
 }
 
 variable service_port {
