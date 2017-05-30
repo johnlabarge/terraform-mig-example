@@ -49,7 +49,7 @@ resource "google_compute_instance_template" "compute" {
   }
 
   metadata {
-    startup-script = "${var.compute_startup_script}" file("${path.module}/scripts/compute.sh")}"
+    startup-script = "${var.compute_startup_script}"
   }
 
   lifecycle {
